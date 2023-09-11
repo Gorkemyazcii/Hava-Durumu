@@ -1,1 +1,1 @@
-console.log("Gorkem");
+console.log("Gorkem Yazıcı");
