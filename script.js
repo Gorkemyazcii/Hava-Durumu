@@ -6,7 +6,8 @@ const setQuery = (e) => {
         getResult(searchBar.value)
 }
 const getResult = (cityName) => {
-    console.log(cityName);
+    let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
+    console.log(query);
 }
 
 const searchBar = document.getElementById('searchBar');
