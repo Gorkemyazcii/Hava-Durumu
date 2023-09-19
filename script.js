@@ -7,8 +7,15 @@ const setQuery = (e) => {
 }
 const getResult = (cityName) => {
     let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
-    console.log(query);
+    fetch(query)
+        .then(weather => {
+            return weather.json()
+        })
+        .then(displayResult)
 }
 
+const displayResult = (result) => {
+    console.log(result);
+}
 const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keypress', setQuery);
