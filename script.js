@@ -20,6 +20,14 @@ const displayResult = (result) => {
     city.innerText = `${result.name},${result.sys.country}`
 
     let temp = document.querySelector('.temp')
+    temp.innerText = `${Math.round(result.main.temp)}°C`
+
+    let desc = document.querySelector('.desc')
+    desc.innerText = result.weather[0].description
+
+    let minmax = document.querySelector('.minmax')
+
+
 }
 const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keypress', setQuery);
