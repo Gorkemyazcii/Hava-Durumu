@@ -16,6 +16,10 @@ const getResult = (cityName) => {
 
 const displayResult = (result) => {
     console.log(result);
+    let city = document.querySelector('.city')
+    city.innerText = `${result.name},${result.sys.country}`
+
+    let temp = document.querySelector('.temp')
 }
 const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keypress', setQuery);
