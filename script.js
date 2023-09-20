@@ -1,5 +1,5 @@
 const url = 'https://api.openweathermap.org/data/2.5/';
-
+const key = 'Your Api key';
 
 const setQuery = (e) => {
     if (e.keyCode == '13')
@@ -13,6 +13,8 @@ const getResult = (cityName) => {
         })
         .then(displayResult)
 }
+const image = document.querySelector('.weather-box');
+
 
 const displayResult = (result) => {
     console.log(result);
